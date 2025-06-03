@@ -1,0 +1,12 @@
+services:
+  whisper-app:
+    build: .
+    container_name: whisper-app
+    volumes:
+      - ./:/app
+    ports:
+      - "3000:3000" # Altere se sua app escutar em outra porta
+    environment:
+      - NODE_ENV=production
+    tty: true
+    stdin_open: true
